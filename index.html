@@ -9,6 +9,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 	<style>
+		.progress-bar {
+    width: 5%;
+    transition: width 0.4s ease-in-out;
+}
+		.progress-bar:focus {
+    width: 100%;
+}
 		.form-inline .form-group #priceTag {
 			width: 40%;
 		}
@@ -27,7 +34,9 @@
 		
 		.jumbotron {
 			/*			background-color: #f4511e;*/
-			background-color: #eb5222;
+/*			background-color: #0067ad;*/
+/*			background-color: #faf600;*/
+			background-color: #0b92d4;
 			color: #fff;
 			padding: 30px 0px;
 			font-family: Montserrat, sans-serif;
@@ -134,7 +143,8 @@
 		}
 		
 		.panel {
-			border: 15px solid #f4511e;
+/*			border: 15px solid #f4511e;*/
+			border: 15px solid #0b92d4;
 			border-radius: 0 !important;
 			box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
 			transition: box-shadow 0.5s;
@@ -273,13 +283,18 @@
 				font-size: 150px;
 			}
 		}
+
+		
+		
+	
+		
 	</style>
 </head>
 
 <body>
 	<div class="jumbotron">
 		<h1><span class="glyphicon glyphicon-th-large" style="font-size: 80%; color:#ffffff;"></span>ReviewDock</h1>
-		<p>幫你找評價</p>
+		<p><span class="glyphicon glyphicon-bell" style="color:#faf600;"></span>幫你過濾業配文</p>
 		<div class="container">
 			<div class="panel panel-success">
 				<!--
@@ -288,14 +303,16 @@
 					<h3 class="panel-title">Spring</h3>
 				</div>
 -->
-
+			
 				<div class="panel-body">
+				<form method="POST" action="http://formspree.ioxx/x@gmail.com">
 					<div class="form-group">
 						<div class="pNameBlock">
-							<label for="#" class="">您想知道的商品名稱或網址：</label>
-							<input class="form-control input-lg rounded-border" type="text" placeholder="英國brush-baby嬰幼兒聲波電動牙刷">
+						<span class="glyphicon glyphicon-list-alt"></span> <label for="#" class="">您想知道：</label>
+							<textarea name="Message" class="form-control input-lg has-warning" type="text" rows="3" placeholder="Brush-Baby嬰幼兒聲波電動牙刷好用嗎？" required></textarea>
 						</div>
 
+<!--
 						<div>
 							<div>
 								<form>
@@ -305,15 +322,15 @@
 										<div>
 											<input id= "commment" type="checkbox">
 											網友心得</div>
-<!--											<label for="commment">網友心得</label>-->
+											<label for="commment">網友心得</label>
 											<div>
 											<input id="sp" type="checkbox">
 												業配文</div>
-<!--											<label for="sp">業配文</label>-->
+											<label for="sp">業配文</label>
 											<span class="form-inline">   
         <input id="other" type="checkbox">
         其他
-<!--        <label for="other">其他</label>-->
+        <label for="other">其他</label>
       <input type="text" class="form-control" >
     </span>
 										</div>
@@ -322,21 +339,26 @@
 
 							</div>
 						</div>
+-->
 					</div>
 
 
 					<div class="form-group">
-						<label class="">寄送報告到：</label>
-						<input type="email" class="form-control input-lg" placeholder="your@email.com" required>
+						<span class="glyphicon glyphicon-send"></span>  <label class="">E-Mail：</label>
+						<input name="_replyto" type="email" class="form-control input-lg" placeholder="your@email.com" required>
 					</div>
-					<div type="button" class="btn btn-lg btn-primary btn-block trackButton">開始訂閱
-					</div>
+					<input id="submitButton" type="submit" value="下載評價到你的信箱" class="btn btn-lg btn-primary btn-block trackButton">
+					  <input type="hidden" name="_subject" value="New Submission!" />
+  <input type="hidden" name="_format" value="plain" />
+					</form>
 
 				</div>
 
 			</div>
 		</div>
 		<div>
+		
+			
 			<p style="font-size:12px">We will keep your email secret!</p>
 		</div>
 	</div>
@@ -348,17 +370,17 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-off logo-small"></span>
+				<span class="glyphicon glyphicon-off logo-small" style="color:#0b92d4"></span>
 				<h4>POWER</h4>
 				<p>Lorem ipsum dolor sit amet..</p>
 			</div>
 			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-heart logo-small"></span>
+				<span class="glyphicon glyphicon-heart logo-small" style="color:#0b92d4"></span>
 				<h4>Prod</h4>
 				<p>Lorem ipsum dolor sit amet..</p>
 			</div>
 			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-lock logo-small"></span>
+				<span class="glyphicon glyphicon-lock logo-small" style="color:#0b92d4"></span>
 				<h4>DONE</h4>
 				<p>Lorem ipsum dolor sit amet..</p>
 			</div>
@@ -367,8 +389,9 @@
 
 
 
-	<!--		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 
