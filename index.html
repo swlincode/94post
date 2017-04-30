@@ -2,480 +2,123 @@
 <html>
 
 <head>
-		<meta charset="UTF-8" name="viewport" content="width=device-width">
-	<title>PostFunnel</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<style>
-		.progress-bar {
-    width: 5%;
-    transition: width 0.4s ease-in-out;
-}
-		.progress-bar:focus {
-    width: 100%;
-}
-		.form-inline .form-group #priceTag {
-			width: 40%;
-		}
-		
-		.form-group {
-			margin-bottom: 5px;
-		}
-		
-		.form-group .pNameBlock {
-			margin-bottom: 5px;
-		}
-		
-		.form-group .trackButton {
-			margin-top: 54px;
-		}
-		
-		.jumbotron {
-			/*			background-color: #f4511e;*/
-/*			background-color: #0067ad;*/
-/*			background-color: #faf600;*/
-			background-color: #0b92d4;
-			color: #fff;
-			padding: 30px 0px;
-			font-family: Montserrat, sans-serif;
-		}
-		
-		.jumbotron h1 {
-			text-align: center;
-			font-family: 'Concert One', cursive;
-		}
-		
-		.jumbotron p {
-			text-align: center;
-		}
-		
-		.panel.panel-success {
-			width: 800px;
-		}
-		
-		.panel-body {
-			color: #262626;
-			font-size: 16px;
-		}
-		
-		body {
-			font: 400 15px Lato, sans-serif;
-			line-height: 1.8;
-			color: #818181;
-		}
-		
-		h2 {
-			font-size: 24px;
-			text-transform: uppercase;
-			color: #303030;
-			font-weight: 600;
-			margin-bottom: 30px;
-		}
-		
-		h4 {
-			font-size: 19px;
-			line-height: 1.375em;
-			color: #303030;
-			font-weight: 400;
-			margin-bottom: 30px;
-		}
-		
-		.container-fluid {
-			padding: 60px 50px;
-		}
-		
-		.container .panel {
-			margin: 0px auto;
-		}
-		
-		.bg-grey {
-			background-color: #f6f6f6;
-		}
-		
-		.bg-blue {
-			background-color: #0b92d4;
-			font-size: 20px;
-			color: #fff;
-			padding:30px;
-			font-family: Montserrat;
-		}
-		
-		.logo-small {
-			color: #f4511e;
-			font-size: 50px;
-		}
-		
-		.logo {
-			color: #f4511e;
-			font-size: 200px;
-		}
-		
-		.thumbnail {
-			padding: 0 0 15px 0;
-			border: none;
-			border-radius: 0;
-		}
-		
-		.thumbnail img {
-			width: 100%;
-			height: 100%;
-			margin-bottom: 10px;
-		}
-		
-		.carousel-control.right,
-		.carousel-control.left {
-			background-image: none;
-			color: #f4511e;
-		}
-		
-		.carousel-indicators li {
-			border-color: #f4511e;
-		}
-		
-		.carousel-indicators li.active {
-			background-color: #f4511e;
-		}
-		
-		.item h4 {
-			font-size: 19px;
-			line-height: 1.375em;
-			font-weight: 400;
-			font-style: italic;
-			margin: 70px 0;
-		}
-		
-		.item span {
-			font-style: normal;
-		}
-		
-		.panel {
-/*			border: 15px solid #f4511e;*/
-			border: 15px solid #0b92d4;
-			border-radius: 0 !important;
-			box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
-			transition: box-shadow 0.5s;
-			width: 90%;
-		}
-		
-		.panel:hover {
-			box-shadow: 5px 0px 40px rgba(0, 0, 0, .6);
-		}
-		
-		.panel-footer .btn:hover {
-			border: 1px solid #1ca8ff;
-			background-color: #fff !important;
-			color: #f4511e;
-		}
-		
-		.panel-heading {
-			color: #fff !important;
-			background-color: #f4511e !important;
-			padding: 25px;
-			border-bottom: 1px solid transparent;
-			border-top-left-radius: 0px;
-			border-top-right-radius: 0px;
-			border-bottom-left-radius: 0px;
-			border-bottom-right-radius: 0px;
-		}
-		
-		.panel-footer {
-			background-color: white !important;
-		}
-		
-		.panel-footer h3 {
-			font-size: 32px;
-		}
-		
-		.panel-footer h4 {
-			color: #aaa;
-			font-size: 14px;
-		}
-		
-		.panel-footer .btn {
-			margin: 15px 0;
-			background-color: #f4511e;
-			color: #fff;
-		}
-		
-		.navbar {
-			margin-bottom: 0;
-			background-color: #f4511e;
-			z-index: 9999;
-			border: 0;
-			font-size: 12px !important;
-			line-height: 1.42857143 !important;
-			letter-spacing: 4px;
-			border-radius: 0;
-			font-family: Montserrat, sans-serif;
-		}
-		
-		.navbar li a,
-		.navbar .navbar-brand {
-			color: #fff !important;
-		}
-		
-		.navbar-nav li a:hover,
-		.navbar-nav li.active a {
-			color: #f4511e !important;
-			background-color: #fff !important;
-		}
-		
-		.navbar-default .navbar-toggle {
-			border-color: transparent;
-			color: #fff !important;
-		}
-		
-		footer .glyphicon {
-			font-size: 20px;
-			margin-bottom: 20px;
-			color: #f4511e;
-		}
-		
-		.slideanim {
-			visibility: hidden;
-		}
-		
-		.slide {
-			animation-name: slide;
-			-webkit-animation-name: slide;
-			animation-duration: 1s;
-			-webkit-animation-duration: 1s;
-			visibility: visible;
-		}
-		
-		@keyframes slide {
-			0% {
-				opacity: 0;
-				transform: translateY(70%);
-			}
-			100% {
-				opacity: 1;
-				transform: translateY(0%);
-			}
-		}
-		
-		@-webkit-keyframes slide {
-			0% {
-				opacity: 0;
-				-webkit-transform: translateY(70%);
-			}
-			100% {
-				opacity: 1;
-				-webkit-transform: translateY(0%);
-			}
-		}
-		
-		@media screen and (max-width: 768px) {
-			.col-sm-4 {
-				text-align: center;
-				margin: 25px 0;
-			}
-			.btn-lg {
-				width: 100%;
-				margin-bottom: 1px;
-			}
-			/*
-			.panel {
-				width: 99%;
-			}
-*/
-			.panel.panel-success {
-				width: 100%;
-			}
-		}
-		
-		@media screen and (max-width: 480px) {
-			.logo {
-				font-size: 150px;
-			}
-		}
+    <meta charset="UTF-8" name="viewport" content="width=device-width">
+    <title>PostFunnel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Lato|Montserrat" rel="stylesheet">
 
-		
-		
-	
-		
-	</style>
 </head>
 
 <body>
-	<div class="jumbotron">
-		<h1><span class="glyphicon glyphicon-collapse-up" style="font-size: 80%; color:#ffffff;"></span >PostFunnel</h1>
-		<p style="color:"><span class="glyphicon glyphicon-" style="color:#faf600;"></span>幫你過濾業配文</p>
-		<div class="container">
-			<div class="panel panel-success">
-				<!--
-				
-				<div class="panel-heading">
-					<h3 class="panel-title">Spring</h3>
-				</div>
--->
-			
-				<div class="panel-body">
-				<form method="POST" action="http://formspree.ioxx/x@gmail.com">
-					<div class="form-group">
-						<div class="pNameBlock">
-						<span class="glyphicon glyphicon-list-alt"></span> <label for="#" class="">您想知道：</label>
-							<textarea name="Message" class="form-control input-lg has-warning" type="text" rows="3" placeholder="Brush-Baby嬰幼兒聲波電動牙刷 好用嗎？" required></textarea>
-						</div>
-
-<!--
-						<div>
-							<div>
-								<form>
-									<div class="form-group">
-										<label class="">想看的內容：</label>
-										<div class="form-group">
-										<div>
-											<input id= "commment" type="checkbox">
-											網友心得</div>
-											<label for="commment">網友心得</label>
-											<div>
-											<input id="sp" type="checkbox">
-												業配文</div>
-											<label for="sp">業配文</label>
-											<span class="form-inline">   
-        <input id="other" type="checkbox">
-        其他
-        <label for="other">其他</label>
-      <input type="text" class="form-control" >
-    </span>
-										</div>
-									</div>
-								</form>
-
-							</div>
-						</div>
--->
-					</div>
+    <div class="jumbotron">
+        <h1><span class="glyphicon glyphicon-collapse-up" style="font-size: 80%; color:#ffffff;"></span >PostFunnel</h1>
+		<p style="color:"><span class="glyphicon glyphicon-" style="color:#faf600;"></span>幫你找真實評價</p>
+            <div class="container">
+                <div class="panel panel-success">
 
 
-					<div class="form-group">
-						<span class="glyphicon glyphicon-send"></span>  <label class="">E-Mail：</label>
-						<input name="_replyto" type="email" class="form-control input-lg" placeholder="you@email.com" required>
-					</div>
-					<input id="submitButton" type="submit" value="試看看效果" class="btn btn-lg btn-success btn-block trackButton">
-					  <input type="hidden" name="_subject" value="New Submission!" />
-  <input type="hidden" name="_format" value="plain" />
-					</form>
+                    <div class="panel-body">
+                        <form method="POST" action="http://formspree.ioxx/x@gmail.com">
+                            <div class="form-group">
+                                <div class="pNameBlock">
+                                    <span class="glyphicon glyphicon-list-alt"></span> <label for="#" class="">您想知道：</label>
+                                    <textarea name="Message" class="form-control input-lg has-warning" type="text" rows="3" placeholder="Brush-Baby嬰幼兒聲波電動牙刷 好用嗎？" required></textarea>
+                                </div>
 
-				</div>
-
-			</div>
-		</div>
-		<div>
-		
-			
-			<p style="font-size:12px">We will keep your email secret!</p>
-		</div>
-	</div>
+                            </div>
 
 
+                            <div class="form-group">
+                                <span class="glyphicon glyphicon-send"></span>
+                                <label class="">E-Mail：</label>
+                                <input name="_replyto" type="email" class="form-control input-lg" placeholder="you@email.com" required>
+                            </div>
+                            <input id="submitButton" type="submit" value="試看看效果" class="btn btn-lg btn-success btn-block trackButton">
+                            <input type="hidden" name="_subject" value="New Submission!" />
+                            <input type="hidden" name="_format" value="plain" />
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+            <div>
 
 
-
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo"></span>
+                <p style="font-size:12px">We will keep your email secret!</p>
+            </div>
     </div>
-    <div class="col-sm-8">
-      <h2>分類來源</h2>
-      <h4>Our mission lorem ipsum dolor sit amet,</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>自動搜尋</h2>
+                <h3>幫你找到<span id="autoSum">  </span>個評價，其中有<span id="p4_text_num">  </span>個業配文</h3>
+                <p></p>
+                <br>
+                <!--      <button onclick="delayButton()" id="demoButton" class="btn btn-primary btn-lg">Demo</button>-->
+            </div>
+            <div class="col-sm-5">
+
+                <div>
+                    <span>個人Blog</span>
+                    <div class="progress">
+                        <div id="progress_1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
+                            <p id="progress_1_text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <span>論壇</span>
+                <div class="progress">
+                    <div id="progress_2" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
+                        <p id="progress_2_text"></p>
+                    </div>
+                </div>
+                <span>購物網站</span>
+                <div class="progress">
+                    <div id="progress_3" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
+                        <p id="progress_3_text"></p>
+                    </div>
+                </div>
+                <span>業配文</span>
+                <div class="progress">
+                    <div id="progress_4" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
+                        <p id="progress_4_text"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 
 
-
-
-
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      <h2>自動搜尋</h2>
-      <h4>幫你找到<span id="autoSum">  </span>個評價</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-      <br>
-<!--      <button onclick="delayButton()" id="demoButton" class="btn btn-primary btn-lg">Demo</button>-->
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-th logo"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>分類來源</h2>
+                <h4>Our mission lorem ipsum dolor sit amet,</h4><br>
+                <p> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+            </div>
+        </div>
     </div>
-    <div class="col-sm-5">
-    
-    
-<div>
-<span>個人Blog</span>
-<div class="progress">
-  <div id="progress_1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 1%"><p id="progress_1_text"></p></div>
-</div>
-</div>
-
-<span>論壇</span>
-<div class="progress">
-  <div id="progress_2" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 1%"><p id="progress_2_text"></p>
-  </div>
-</div>
-<span>購物網站</span>
-<div class="progress">
-  <div id="progress_3" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 1%"><p id="progress_3_text"></p>
-  </div>
-</div>
-<span>業配文</span>
-<div class="progress">
-  <div id="progress_4" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%"><p id="progress_4_text"></p>
-  </div>
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
-  </div>
-</div>
 
 
-<!--
+    <footer class="container-fluid text-center bg-blue">
+        <p>info@mail.com</p>
+    </footer>
 
-	<div class="container-fluid text-center">
-		<h2>What we offer</h2>
-		<br>
-		<div class="row">
-			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-refresh logo-small" style="color:#0b92d4"></span>
-				<h4>自動</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
-			</div>
-			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-th logo-small" style="color:#0b92d4"></span>
-				<h4>Prod</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
-			</div>
-			<div class="col-sm-4">
-				<span class="glyphicon glyphicon-list-alt logo-small" style="color:#0b92d4"></span>
-				<h4>DONE</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
-			</div>
-		</div>
-	</div>
--->
-
-<footer class="container-fluid text-center bg-blue">
-  <p>info@mail.com</p>
-</footer>
-
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 
