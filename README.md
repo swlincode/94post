@@ -25,17 +25,16 @@
 #### 2. 善用Chrome Console
 ###### Console會告訴你錯在哪一行，錯誤都能在Error message裡找到， 大部分只是拼錯字....
 
-<<<<<<< HEAD
 ![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md2.png)
 =======
 ![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md3.png)
->>>>>>> cd349609ade20334fa652f6d67263fcd2d74e87c
+
 
 #### 3. Brackets Live Preview是好幫手
 ###### Live Preview會提示你目前網頁點選的區塊，並且告訴你是哪一行Code
 
-<<<<<<< HEAD
+
 ![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md3.png)
 =======
 ![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md2.png)
->>>>>>> cd349609ade20334fa652f6d67263fcd2d74e87c
+
