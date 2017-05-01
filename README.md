@@ -1,6 +1,6 @@
-![Markdown](http://markdown.tw/images/208x128.png)
+![Markdown](https://github.com/swlincode/r-d/blob/master/img/logow.png)
  * * *
-###Bootstrap.css
+### Bootstrap.css
  * [Jumbotron][1]
  * [Glyphicons][2]
  * [Progress Bars][3]
@@ -9,7 +9,7 @@
   [2]: http://getbootstrap.com/components/
   [3]: https://www.w3schools.com/bootstrap/bootstrap_progressbars.asp
 
-###Google Fonts
+### Google Fonts
    - [Montserrat, sans-serif][1]
    - [Concert One, cursive][2]
    - [Lato, sans-serif][3]
@@ -18,14 +18,17 @@
   [2]: https://fonts.google.com/specimen/Concert+One
   [3]: https://fonts.google.com/specimen/Lato
   * * *
-###心得
-####1.引用程式碼要從頭到尾檢查
+### 心得
+#### 1. 引用程式碼要從頭到尾檢查
 
-![enter image description here](dde.com/dsa.jpg)
+![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md1.png)
 
-####2.善用Chrome Console
-######Console會告訴你錯在哪一行，大部分錯誤都能在Error message裡找到，很多時候只是拼錯字....
-![enter image description here](dde.com/dsa.jpg)
-####3. Brackets Live Preview是好幫手
-######Live Preview會提示你目前網頁點選的區塊，並且告訴你是哪一行Code
-![enter image description here](dde.com/dsa.jpg)
+#### 2. 善用Chrome Console
+###### Console會告訴你錯在哪一行，錯誤都能在Error message裡找到， 大部分只是拼錯字....
+
+![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md2.png)
+
+#### 3. Brackets Live Preview是好幫手
+###### Live Preview會提示你目前網頁點選的區塊，並且告訴你是哪一行Code
+
+![enter image description here](https://github.com/swlincode/r-d/blob/master/img/md3.png)
