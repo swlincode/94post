@@ -1,4 +1,4 @@
-<!-- ![Markdown](https://github.com/swlincode/r-d/blob/master/img/logow.png) -->
+![Markdown](https://github.com/swlincode/r-d/blob/master/img/logo94.png)
 ### Bootstrap.css
  * [Jumbotron][1]
  * [Glyphicons][2]
